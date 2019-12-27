@@ -39,11 +39,11 @@ composer require lab404/laravel-impersonate
 ```php
 'providers' => [
     // ...
-    Lab404\Impersonate\ImpersonateServiceProvider::class,
+    Bnb\Laravel\Impersonate\ImpersonateServiceProvider::class,
 ],
 ```
 
-- Add the trait `Lab404\Impersonate\Models\Impersonate` to your **User** model.
+- Add the trait `Bnb\Laravel\Impersonate\Models\Impersonate` to your **User** model.
 
 ## Simple usage
 

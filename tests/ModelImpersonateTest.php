@@ -1,8 +1,8 @@
 <?php
 
-namespace Lab404\Tests;
+namespace Bnb\Laravel\Tests;
 
-use Lab404\Impersonate\Services\ImpersonateManager;
+use Bnb\Laravel\Impersonate\Services\ImpersonateManager;
 
 class ModelImpersonateTest extends TestCase
 {

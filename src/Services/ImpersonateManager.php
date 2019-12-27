@@ -1,12 +1,12 @@
 <?php
 
-namespace Lab404\Impersonate\Services;
+namespace Bnb\Laravel\Impersonate\Services;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Application;
-use Lab404\Impersonate\Events\LeaveImpersonation;
-use Lab404\Impersonate\Events\TakeImpersonation;
+use Bnb\Laravel\Impersonate\Events\LeaveImpersonation;
+use Bnb\Laravel\Impersonate\Events\TakeImpersonation;
 
 class ImpersonateManager
 {

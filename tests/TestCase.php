@@ -1,9 +1,9 @@
 <?php
 
-namespace Lab404\Tests;
+namespace Bnb\Laravel\Tests;
 
-use Lab404\Impersonate\ImpersonateServiceProvider;
-use Lab404\Tests\Stubs\Models\User;
+use Bnb\Laravel\Impersonate\ImpersonateServiceProvider;
+use Bnb\Laravel\Tests\Stubs\Models\User;
 use Orchestra\Database\ConsoleServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase

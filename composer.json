@@ -1,6 +1,6 @@
 {
-  "name": "lab404/laravel-impersonate",
-  "description": "Laravel Impersonate is a plugin that allows to you to authenticate as your users.",
+  "name": "bnbwebexpertise/laravel-impersonate",
+  "description": "Laravel Impersonate is a plugin that allows to you to authenticate as your users forked from 404labfr/laravel-impersonate.",
   "type": "library",
   "keywords": [
     "laravel",
@@ -29,11 +29,15 @@
     {
       "name": "404lab",
       "email": "web@404lab.fr"
+    },
+    {
+      "name": "Jérémy Gaulin",
+      "email": "jeremy@bnb.re"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Lab404\\Impersonate\\": "src/"
+      "Bnb\\Laravel\\Impersonate\\": "src/"
     },
     "files": [
       "src/helpers.php"
@@ -41,13 +45,13 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Lab404\\Tests\\": "tests/"
+      "Bnb\\Laravel\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Lab404\\Impersonate\\ImpersonateServiceProvider"
+        "Bnb\\Laravel\\Impersonate\\ImpersonateServiceProvider"
       ]
     }
   },
