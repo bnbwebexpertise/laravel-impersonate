@@ -1,9 +1,9 @@
 <?php
 
-namespace Lab404\Impersonate\Models;
+namespace Bnb\Laravel\Impersonate\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Lab404\Impersonate\Services\ImpersonateManager;
+use Bnb\Laravel\Impersonate\Services\ImpersonateManager;
 
 trait Impersonate
 {

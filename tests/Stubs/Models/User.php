@@ -1,10 +1,10 @@
 <?php
 
-namespace Lab404\Tests\Stubs\Models;
+namespace Bnb\Laravel\Tests\Stubs\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Lab404\Impersonate\Models\Impersonate;
+use Bnb\Laravel\Impersonate\Models\Impersonate;
 
 class User extends Authenticatable
 {

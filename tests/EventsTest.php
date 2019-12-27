@@ -1,14 +1,14 @@
 <?php
 
-namespace Lab404\Tests;
+namespace Bnb\Laravel\Tests;
 
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Event;
-use Lab404\Impersonate\Events\LeaveImpersonation;
-use Lab404\Impersonate\Events\TakeImpersonation;
-use Lab404\Impersonate\Services\ImpersonateManager;
-use Lab404\Tests\Stubs\Models\User;
+use Bnb\Laravel\Impersonate\Events\LeaveImpersonation;
+use Bnb\Laravel\Impersonate\Events\TakeImpersonation;
+use Bnb\Laravel\Impersonate\Services\ImpersonateManager;
+use Bnb\Laravel\Tests\Stubs\Models\User;
 
 class EventsTest extends TestCase
 {

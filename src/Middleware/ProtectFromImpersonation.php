@@ -1,10 +1,10 @@
 <?php
 
-namespace Lab404\Impersonate\Middleware;
+namespace Bnb\Laravel\Impersonate\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Redirect;
-use Lab404\Impersonate\Services\ImpersonateManager;
+use Bnb\Laravel\Impersonate\Services\ImpersonateManager;
 
 class ProtectFromImpersonation
 {

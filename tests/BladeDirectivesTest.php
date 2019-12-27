@@ -1,8 +1,8 @@
 <?php
 
-namespace Lab404\Tests;
+namespace Bnb\Laravel\Tests;
 
-use Lab404\Tests\Stubs\Models\User;
+use Bnb\Laravel\Tests\Stubs\Models\User;
 
 class BladeDirectivesTest extends TestCase
 {
