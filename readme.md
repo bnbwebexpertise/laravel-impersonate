@@ -22,11 +22,17 @@
 
 ## Requirements
 
-- Laravel >= 5.8
-- PHP >= 7.1
+- Laravel 6.x or 7.x
+- PHP >= 7.2
 
-**See release v1.2 for Laravel <= 5.8 support.**
-**See release v1.1 for Laravel <= 5.4 support.**
+### Laravel support
+
+| Version       | Release       |
+|:-------------:|:-------------:|
+| 6.x, 7.x      | 1.6           |
+| 5.8           | 1.5           |
+| 5.7, 5.6      | 1.2           |
+| 5.5, 5.4      | 1.1           |
 
 ## Installation
 
@@ -171,7 +177,7 @@ There are two events available that can be used to improve your workflow:
 - `TakeImpersonation` is fired when an impersonation is taken.
 - `LeaveImpersonation` is fired when an impersonation is leaved.
 
-Each events returns two properties `$event->impersonator` and `$event->impersonated` containing User model isntance.
+Each events returns two properties `$event->impersonator` and `$event->impersonated` containing User model instance.
 
 ## Configuration
 
