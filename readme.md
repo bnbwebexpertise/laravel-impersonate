@@ -37,7 +37,7 @@
 
 - Require it with Composer:
 ```bash
-composer require lab404/laravel-impersonate
+composer require bnbwebexpertise/laravel-impersonate
 ```
 
 - Add the service provider at the end of your `config/app.php`:
