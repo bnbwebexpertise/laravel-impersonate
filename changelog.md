@@ -18,10 +18,6 @@
 
 - Laravel 7.x support
 
-### Removed
-
-- Laravel 5.x support
-
 ## 1.5.1
 
 ### Changed
