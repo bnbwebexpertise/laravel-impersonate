@@ -1,5 +1,6 @@
 <?php
 
+use Bnb\Laravel\Impersonate\Services\ImpersonateManager;
 use Illuminate\Contracts\Auth\Authenticatable;
 
 if (! function_exists('can_impersonate')) {
@@ -52,6 +53,6 @@ if (! function_exists('is_impersonating')) {
 		$guard = $guard ?? app('impersonate')->getCurrentAuthGuardName();
 
 		return app('auth')->guard($guard)->check()
-            && app('auth')->guard($guard)->user()->isImpersonated();
+            && app('impersonate')->isImpersonating();
 	}
 }
