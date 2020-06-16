@@ -31,10 +31,11 @@ if (! function_exists('can_be_impersonated')) {
 	function can_be_impersonated(Authenticatable $user, string $guard = null): bool
 	{
 		$guard = $guard ?? app('impersonate')->getCurrentAuthGuardName();
+        $auth = app('auth')->guard($guard);
 
-		return app('auth')->guard($guard)->check()
-		       && app('auth')->guard($guard)->user()->id != $user->id
-		       && $user->canBeImpersonated();
+        return $auth->check()
+            && $auth->user()->getAuthIdentifier() !== $user->getAuthIdentifier()
+            && $user->canBeImpersonated();
 	}
 }
 

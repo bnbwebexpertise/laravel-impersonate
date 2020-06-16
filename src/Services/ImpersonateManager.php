@@ -2,7 +2,10 @@
 
 namespace Bnb\Laravel\Impersonate\Services;
 
+use Bnb\Laravel\Impersonate\Exceptions\InvalidUserProvider;
+use Bnb\Laravel\Impersonate\Exceptions\MissingUserProvider;
 use Exception;
+use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Application;
 use Bnb\Laravel\Impersonate\Events\LeaveImpersonation;
@@ -32,7 +35,17 @@ class ImpersonateManager
         }
 
         $providerName = $this->app['config']->get("auth.guards.$guardName.provider");
-        $userProvider = $this->app['auth']->createUserProvider($providerName);
+
+        if (empty($providerName)) {
+            throw new MissingUserProvider($guardName);
+        }
+
+        try {
+            /** @var UserProvider $userProvider */
+            $userProvider = $this->app['auth']->createUserProvider($providerName);
+        } catch (\InvalidArgumentException $e) {
+            throw new InvalidUserProvider($guardName);
+        }
 
         if (!($modelInstance = $userProvider->retrieveById($id))) {
             $model = $this->app['config']->get("auth.providers.$providerName.model");
